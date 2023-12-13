@@ -12,6 +12,7 @@ def main():
                 menu_icon="cast",
                 default_index=0
             )
+        
     
     if selected == "Konsultasi":
         chatbot()
