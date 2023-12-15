@@ -17,7 +17,7 @@ def main():
     if selected == "Konsultasi":
         chatbot()
 
-    elif selected == "Map":
+    elif selected == "Petunjuk Penggunaan":
         term()
 
 
