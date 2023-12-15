@@ -6,7 +6,7 @@ def chatbot():
     model = "models/text-bison-001"   
     st.header('Chatbot Kesehatan')
     def clear_chat_history():
-        st.session_state.messages = [{"role": "assistant", "content": "Ada yang bisa AI Bantu?"}]
+        st.session_state.messages = [{"role": "doctor", "content": "Ada yang bisa AI Bantu?"}]
     st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
     if "messages" not in st.session_state:
