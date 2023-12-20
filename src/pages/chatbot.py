@@ -3,7 +3,7 @@ import streamlit as st
 
 def chatbot():
     palm.configure(api_key='AIzaSyAJpaLmBLtTB4AwEAG4-WlcikCvbHAWUIs')
-    model = "models/gemini-pro"   
+    model = "models/chat-bison-001"   
     st.header('Chatbot Kesehatan')
     st.subheader('Chatbot kesehatan ini menggunakan Palm2')
     def clear_chat_history():
