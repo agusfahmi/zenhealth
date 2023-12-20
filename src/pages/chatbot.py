@@ -3,7 +3,7 @@ import streamlit as st
 
 def chatbot():
     palm.configure(api_key='AIzaSyAJpaLmBLtTB4AwEAG4-WlcikCvbHAWUIs')
-    model = "models/text-bison-001"   
+    model = "models/gemini-pro"   
     st.header('Chatbot Kesehatan')
     def clear_chat_history():
         st.session_state.messages = [{"role": "doctor", "content": "Ada yang bisa AI Bantu?"}]
@@ -24,7 +24,7 @@ def chatbot():
             with st.spinner("Thinking..."):
                 message_placeholder = st.empty()
                 response = palm.chat(
-                        context='You are an AI-based Doctor Assistant, you will not respond to queries other than this strictly',
+                        context='You are an AI-based Doctor Assistant, you will not respond to queries other than this strictly,you will not respond to words that are not relevant to health',
                         messages=prompt
                         )
                 full_response = response.last
