@@ -5,6 +5,7 @@ def chatbot():
     palm.configure(api_key='AIzaSyAJpaLmBLtTB4AwEAG4-WlcikCvbHAWUIs')
     model = "models/gemini-pro"   
     st.header('Chatbot Kesehatan')
+    st.subheader('Chatbot kesehatan ini menggunakan Palm2')
     def clear_chat_history():
         st.session_state.messages = [{"role": "doctor", "content": "Ada yang bisa AI Bantu?"}]
     st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
